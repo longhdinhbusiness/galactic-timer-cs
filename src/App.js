@@ -1,31 +1,47 @@
-import "Your code here";
-import useTimer from "./useTimer";
+import React from 'react';
+import useTimer from './useTimer';
 
 function App() {
-  const { time, startTimer, stopTimer, resetTimer, active } = useTimer(0);
+  const {
+    time,
+    startTimer,
+    stopTimer,
+    resetTimer,
+    splitTimer,
+    splits,
+    splitRef,
+    active,
+  } = useTimer(0);
 
   return (
     <div className="App container">
-      <h1>Coder Timer</h1>
+      <h1>Galactic Timer</h1>
       <div className="timer__wrapper">
         <div className="timer__display">
-          <p>{"Your code here"}</p>
+          <p>{time}</p>
         </div>
         <div className="button__wrapper">
-          <button className="button" onClick={"Your code here"}>
-            Stop
+          <button className="button" onClick={stopTimer}>
+            STOP
           </button>
-          <button
-            className="button"
-            ref={"Your code here"}
-            onClick={"Your code here"}
-          >
-            Start
+          <button className="button" ref={active} onClick={startTimer}>
+            START
           </button>
-          <button className="button" onClick={"Your code here"}>
-            Reset
+          <button className="button" onClick={resetTimer}>
+            RESET
+          </button>
+          <button className="button" ref={splitRef} onClick={splitTimer}>
+            SPLIT
           </button>
         </div>
+      </div>
+      <div className="split_wrapper">
+        <h2>Splits:</h2>
+        <ul>
+          {splits.map((split, index) => (
+            <li key={index}>{split}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );

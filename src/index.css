@@ -1,7 +1,7 @@
-:root {
+/* :root {
   --text-shadow-color: #ff9c99;
   --text-main-color: #d74742;
-}
+} */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,32 +10,32 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "", "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, '', 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 h1 {
-  color: var(--text-main-color);
-  font-family: "Rouge Script", cursive;
-  font-size: 130px;
-  font-weight: normal;
-  line-height: 48px;
-  margin: 0 0 50px;
+  color: darkgray;
+  font-family: 'Courier New';
+  font-weight: 600;
+  font-size: 100px;
+  line-height: 100px;
+  margin: 0 0 20px;
   text-align: center;
-  text-shadow: 1px 1px 2px var(--text-shadow-color);
+  text-shadow: 3px 5px 3px rgb(48, 44, 44);
 }
 
 p {
   color: #ffffff;
-  font-family: "Carme", sans-serif;
+  font-family: 'Carme', sans-serif;
   font-size: 16px;
 }
 
@@ -47,50 +47,57 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url(https://img.freepik.com/free-photo/starry-night-nature-background-with-mountains-aesthetic-remixed-media_53876-126763.jpg?t=st=1727566772~exp=1727570372~hmac=360dafe0975455f1d47f552187f9349cfa887d6a0ec8ef0fc1738a08c0aad02a&w=1060);
+  background-position: cover;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
 }
 .timer__wrapper {
   border-radius: 24px;
-  background-color: var(--text-shadow-color);
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
-    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  padding: 20px;
+  background-color: rgba(52, 51, 51, 0.601);
+  margin: 20px;
 }
 .timer__display {
   padding-left: 1.5em;
 }
 .timer__display > p {
-  font-size: 5em;
+  font-size: 4rem;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 }
 
 .button__wrapper {
   display: flex;
-  width: 30vw;
+  width: 100%;
   padding: 1em;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 .button {
   color: white;
-  background-color: var(--text-shadow-color);
+  background-color: rgba(45, 43, 43, 0.485);
   font-size: 1.5em;
-  border-radius: 100vh;
+  border-radius: 10px;
   border: 1px solid white;
   padding: 1em;
   transition: ease-in-out 0.3s;
+  font-weight: 500;
+  font-family: 'Rouge Script';
+  margin: 5px;
+  padding: 10px;
 }
-.button:active {
-  border: 1px solid var(--text-main-color);
-  background-color: var(--text-main-color);
-}
+
 .button:hover {
-  transform: scale(120%);
+  transform: scale(115%);
+  cursor: pointer;
+  filter: brightness(200%);
+  background-color: rgba(131, 132, 135, 0.367);
 }
 .button:disabled {
-  background-color: rgb(170, 164, 164);
+  background-color: rgba(224, 224, 230, 0.197);
 }
-/* .button.active {
-  border: 1px solid var(--text-main-color);
-  background-color: var(--text-main-color);
-} */
+
 @media only screen and (max-device-width: 1280px) {
   * {
     font-size: 0.9em;
@@ -107,4 +114,30 @@ p {
     font-size: 3.8em;
     padding-left: 0;
   }
+}
+
+.split_wrapper {
+  border-radius: 20px;
+  width: 80%;
+  text-align: center;
+  color: white;
+  background-color: rgba(152, 156, 159, 0.386);
+  padding: 10px;
+  height: min-content;
+}
+
+.split_wrapper > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  font-weight: 700;
+}
+.split_wrapper > ul > li {
+  margin: 3px;
+  background-color: rgba(147, 149, 154, 0.749);
+  padding: 2px;
+  border-radius: 5px;
 }

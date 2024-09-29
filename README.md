@@ -10,7 +10,7 @@ id: cs-virgil-2.2-react-eco
 
 The purpose of this project is to practice our React hooks skills such as `useState` `useRef` and `Custom Hook`
 
-Everyone know what a timer is eventhough not all timers look the same. Today, we are making a timer that look like this , (_or better!_)
+Everyone know what a timer is even though not all timers look the same. Today, we are making a timer that look like this , (_or better!_)
 ![clock](https://i.ibb.co/0nYMqfL/Screen-Shot-2022-03-12-at-18-07-21.png)
 
 [Check out this demo to see it in action !](https://cs-react-timer.netlify.app/)
@@ -30,8 +30,8 @@ Everyone know what a timer is eventhough not all timers look the same. Today, we
 Fork this [repo](https://github.com/coderschool/cs-react-timer-starter-code) and read through the files.
 Often time , developers are required to work with an existing codebase and improve upon. This is one of that time.
 
-You should only code in the designinated area.
-Using the VSC search function for "Your code here", you will see a list of all the placces that required your attention.
+You should only code in the designated area.
+Using the VSC search function for "Your code here", you will see a list of all the places that required your attention.
 
 ## Grading
 

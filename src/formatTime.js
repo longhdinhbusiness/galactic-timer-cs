@@ -1,8 +1,9 @@
 export const formatTime = (time) => {
-  const getSeconds = "Your code here";
-  const minutes = "Your code here";
-  const getMinutes = "Your code here";
-  const getHours = "Your code here";
+  const getSeconds = time % 60;
+  const getMinutes = Math.floor((time % 3600) / 60);
+  const getHours = Math.floor(time / 3600);
 
-  return `${getHours} : ${getMinutes} : ${getSeconds}`;
+  return `${getHours.toString().padStart(2, '0')} : ${getMinutes
+    .toString()
+    .padStart(2, '0')} : ${getSeconds.toString().padStart(2, '0')}`;
 };
